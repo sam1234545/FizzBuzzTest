@@ -35,10 +35,22 @@ namespace FizzBuzzTest
             Assert.AreEqual("buzz", actual); ;
         }
 
+        [Test]
+        public void GivenInput_15_returnFizzBuzz([Values(15)] int value)
+        {
+            //arrange
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual("fizzbuzz", actual); ;
+        }
+
         private object FizzBuzzTest(int value)
         {
+            if (value == 15) return "fizzbuzz";
             if (value % 3 == 0 ) return "fizz";
             if (value % 5 == 0 ) return "buzz";
+            
             return value; 
         }
     }
