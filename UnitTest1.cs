@@ -31,6 +31,18 @@ namespace FizzBuzzTest
             Assert.AreEqual(2, actual);
         }
 
+
+        [Test]
+        public void GivenInput_3_returnFizz()
+        {
+            //arrange
+            int value = 3;
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual("fizz", actual);
+        }
+
         private object FizzBuzzTest(int value)
         {
             if (value == 2) return 2;
