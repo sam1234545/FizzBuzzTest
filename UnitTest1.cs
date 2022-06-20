@@ -75,9 +75,17 @@ namespace FizzBuzzTest
             //assert
             Assert.AreEqual("fizz", actual);
         }
+        public void GivenInput7_returnFizz()
+        {
+            //arrange
+            int value = 7;
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual(7 ,actual); ;
+        }
 
-
-    private object FizzBuzzTest(int value)
+        private object FizzBuzzTest(int value)
         {
             if (value == 3|| value == 6) return "fizz";
             else if (value == 5) return "buzz";
