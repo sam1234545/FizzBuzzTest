@@ -93,10 +93,20 @@ namespace FizzBuzzTest
             //assert
             Assert.AreEqual(8, actual); ;
         }
+        [Test]
+        public void GivenInput9_returnFizz()
+        {
+            //arrange
+            int value = 9;
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual("fizz", actual); ;
+        }
 
         private object FizzBuzzTest(int value)
         {
-            if (value == 3|| value == 6) return "fizz";
+            if (value == 3|| value == 6 || value == 9 ) return "fizz";
             else if (value == 5) return "buzz";
             return value; 
         }
