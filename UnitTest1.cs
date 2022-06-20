@@ -118,7 +118,7 @@ namespace FizzBuzzTest
         private object FizzBuzzTest(int value)
         {
             if (value % 3 == 0 ) return "fizz";
-            if (value == 5 || value == 10 ) return "buzz";
+            if (value % 5 == 0 ) return "buzz";
             return value; 
         }
     }
