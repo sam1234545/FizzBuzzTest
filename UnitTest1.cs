@@ -29,7 +29,7 @@ namespace FizzBuzzTest
             Assert.AreEqual("fizz", actual); ;
         }
         [Test]
-        public void GivenInput_Mulitiple_of_5_returnBuzz([Values(5, 10)] int value)
+        public void GivenInput_Mulitiple_of_5_returnBuzz([Values(5, 10,20)] int value)
         {
             //arrange
             //act
@@ -50,9 +50,7 @@ namespace FizzBuzzTest
 
         private object FizzBuzzTest(int value)
         {
-
             StringBuilder stream = new StringBuilder(); 
-           // if (value % 15==0) st.Add "fizzbuzz";
             if (value % 3 == 0 ) stream.Append("fizz") ;
             if (value % 5 == 0) stream.Append("buzz");
             if ( stream.Length > 0 ) return stream.ToString();
