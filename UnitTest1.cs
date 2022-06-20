@@ -1,4 +1,7 @@
 using NUnit.Framework;
+using System.Collections;
+using System.IO;
+using System.Text;
 
 namespace FizzBuzzTest
 {
@@ -47,10 +50,12 @@ namespace FizzBuzzTest
 
         private object FizzBuzzTest(int value)
         {
-            if (value % 15==0) return "fizzbuzz";
-            if (value % 3 == 0 ) return "fizz";
-            if (value % 5 == 0 ) return "buzz";
-            
+
+            StringBuilder stream = new StringBuilder(); 
+           // if (value % 15==0) st.Add "fizzbuzz";
+            if (value % 3 == 0 ) stream.Append("fizz") ;
+            if (value % 5 == 0) stream.Append("buzz");
+            if ( stream.Length > 0 ) return stream.ToString();
             return value; 
         }
     }
