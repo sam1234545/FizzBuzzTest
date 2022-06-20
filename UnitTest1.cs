@@ -6,7 +6,7 @@ namespace FizzBuzzTest
     {
 
         [Test]
-        public void GivenInput_Value_return_thisValue([Values(1,2,4,7,8,11,13,14)] int value)
+        public void GivenInput_Value_return_thisValue([Values(1,2,4,7,8,11,13,14,16,17)] int value)
         {
             //arrange
     
@@ -17,7 +17,7 @@ namespace FizzBuzzTest
         }
 
         [Test]
-        public void GivenInput_Divisibleby3_returnFizz([Values(3, 6, 9, 12)] int value)
+        public void GivenInput_Divisibleby3_returnFizz([Values(3, 6, 9, 12,18)] int value)
         {
             //arrange
             //act
@@ -36,7 +36,7 @@ namespace FizzBuzzTest
         }
 
         [Test]
-        public void GivenInput_15_returnFizzBuzz([Values(15)] int value)
+        public void GivenInput_15_returnFizzBuzz([Values(15,30)] int value)
         {
             //arrange
             //act
@@ -47,7 +47,7 @@ namespace FizzBuzzTest
 
         private object FizzBuzzTest(int value)
         {
-            if (value == 15) return "fizzbuzz";
+            if (value % 15==0) return "fizzbuzz";
             if (value % 3 == 0 ) return "fizz";
             if (value % 5 == 0 ) return "buzz";
             
