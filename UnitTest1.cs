@@ -4,22 +4,6 @@ namespace FizzBuzzTest
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        
-        [Test]
-        public void GivenInput_3_returnFizz()
-        {
-            //arrange
-            int value = 3;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual("fizz", actual);
-        }
 
         [Test]
         public void GivenInput_5_returnBuzz()
@@ -31,26 +15,6 @@ namespace FizzBuzzTest
             //assert
             Assert.AreEqual("buzz", actual);
 
-        }
-        [Test]
-        public void GivenInput_6_returnFizz()
-        {
-            //arrange
-            int value = 6;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual("fizz", actual);
-        }
-        [Test]
-        public void GivenInput9_returnFizz()
-        {
-            //arrange
-            int value = 9;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual("fizz", actual); ;
         }
 
         [Test]
