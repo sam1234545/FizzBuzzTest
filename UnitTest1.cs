@@ -84,6 +84,15 @@ namespace FizzBuzzTest
             //assert
             Assert.AreEqual(7 ,actual); ;
         }
+        public void GivenInput8_return8()
+        {
+            //arrange
+            int value = 8;
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual(8, actual); ;
+        }
 
         private object FizzBuzzTest(int value)
         {
