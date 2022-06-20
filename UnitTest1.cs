@@ -75,7 +75,7 @@ namespace FizzBuzzTest
             //assert
             Assert.AreEqual("fizz", actual);
         }
-        public void GivenInput7_returnFizz()
+        public void GivenInput7_return7()
         {
             //arrange
             int value = 7;
