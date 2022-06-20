@@ -9,29 +9,7 @@ namespace FizzBuzzTest
         {
         }
 
-        [Test]
-        public void GivenInput_1_return1()
-        {
-            //arrange
-            int value = 1;
-            //act
-            var actual =FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual(1, actual);
-        }
-
-        [Test]
-        public void GivenInput_2_return2()
-        {
-            //arrange
-            int value = 2;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual(2, actual);
-        }
-
-
+        
         [Test]
         public void GivenInput_3_returnFizz()
         {
@@ -43,17 +21,6 @@ namespace FizzBuzzTest
             Assert.AreEqual("fizz", actual);
         }
 
-
-        [Test]
-        public void GivenInput_4_return4()
-        {
-            //arrange
-            int value = 4;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual(4, actual);
-        }
         [Test]
         public void GivenInput_5_returnBuzz()
         {
@@ -74,24 +41,6 @@ namespace FizzBuzzTest
             var actual = FizzBuzzTest(value);
             //assert
             Assert.AreEqual("fizz", actual);
-        }
-        public void GivenInput7_return7()
-        {
-            //arrange
-            int value = 7;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual(7 ,actual); ;
-        }
-        public void GivenInput8_return8()
-        {
-            //arrange
-            int value = 8;
-            //act
-            var actual = FizzBuzzTest(value);
-            //assert
-            Assert.AreEqual(8, actual); ;
         }
         [Test]
         public void GivenInput9_returnFizz()
@@ -114,16 +63,28 @@ namespace FizzBuzzTest
             //assert
             Assert.AreEqual("buzz", actual); ;
         }
+
         [Test]
-        public void GivenInput11_return11()
+        public void GivenInput_Value_return_thisValue([Values(1,2,4,7,8,11,13,14)] int value)
         {
             //arrange
-            int value = 11;
+    
             //act
             var actual = FizzBuzzTest(value);
             //assert
-            Assert.AreEqual(11, actual); ;
+            Assert.AreEqual(value, actual); ;
         }
+
+        [Test]
+        public void GivenInput_Divisibleby3_returnFizz([Values(3, 6, 9, 12)] int value)
+        {
+            //arrange
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual("fizz", actual); ;
+        }
+
         private object FizzBuzzTest(int value)
         {
             if (value % 3 == 0 ) return "fizz";
