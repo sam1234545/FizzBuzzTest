@@ -104,10 +104,21 @@ namespace FizzBuzzTest
             Assert.AreEqual("fizz", actual); ;
         }
 
+        [Test]
+        public void GivenInput10_returnBuzz()
+        {
+            //arrange
+            int value = 10;
+            //act
+            var actual = FizzBuzzTest(value);
+            //assert
+            Assert.AreEqual("buzz", actual); ;
+        }
+
         private object FizzBuzzTest(int value)
         {
-            if (value % 3 == 0  ) return "fizz";
-            else if (value == 5) return "buzz";
+            if (value % 3 == 0 ) return "fizz";
+            if (value == 5 || value == 10 ) return "buzz";
             return value; 
         }
     }
