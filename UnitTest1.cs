@@ -7,6 +7,8 @@ namespace FizzBuzzTest
 {
     public class Tests
     {
+        private const string buzz = "buzz";
+        private const string fizz = "fizz";
 
         [Test]
         public void GivenInput_Value_return_thisValue([Values(1,2,4,7,8,11,13,14,16,17)] int value)
@@ -50,9 +52,10 @@ namespace FizzBuzzTest
 
         private object FizzBuzzTest(int value)
         {
+            
             StringBuilder stream = new StringBuilder(); 
-            if (value % 3 == 0 ) stream.Append("fizz") ;
-            if (value % 5 == 0) stream.Append("buzz");
+            if (value % 3 == 0 ) stream.Append(fizz) ;
+            if (value % 5 == 0) stream.Append(buzz);
             if ( stream.Length > 0 ) return stream.ToString();
             return value; 
         }
