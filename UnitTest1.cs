@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections;
 using System.IO;
 using System.Text;
@@ -54,10 +55,15 @@ namespace FizzBuzzTest
         {
 
             StringBuilder stream = new StringBuilder();
-            if (value % 3 == 0) stream.Append(fizz);
-            if (value % 5 == 0) stream.Append(buzz);
+            ComputeValueToDisplay(stream,value);
             if (stream.Length > 0) return stream.ToString();
             return value.ToString();
+        }
+
+        private void ComputeValueToDisplay(StringBuilder stream, int value)
+        {
+            if (value % 3 == 0) stream.Append(fizz);
+            if (value % 5 == 0) stream.Append(buzz);
         }
     }
         
