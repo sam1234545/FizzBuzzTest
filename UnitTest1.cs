@@ -16,9 +16,9 @@ namespace FizzBuzzTest
             //arrange
 
             //act
-            var actual = FizzBuzzTest(value);
+            string actual = FizzBuzzTest(value);
             //assert
-            Assert.AreEqual(value, actual); ;
+            Assert.AreEqual(value.ToString(), actual); ;
         }
 
         [Test]
@@ -26,7 +26,7 @@ namespace FizzBuzzTest
         {
             //arrange
             //act
-            var actual = FizzBuzzTest(value);
+            string actual = FizzBuzzTest(value);
             //assert
             Assert.AreEqual("fizz", actual); ;
         }
@@ -35,7 +35,7 @@ namespace FizzBuzzTest
         {
             //arrange
             //act
-            var actual = FizzBuzzTest(value);
+            string actual = FizzBuzzTest(value);
             //assert
             Assert.AreEqual("buzz", actual); ;
         }
@@ -45,19 +45,19 @@ namespace FizzBuzzTest
         {
             //arrange
             //act
-            var actual = FizzBuzzTest(value);
+            string actual = FizzBuzzTest(value);
             //assert
             Assert.AreEqual("fizzbuzz", actual); ;
         }
 
-        private object FizzBuzzTest(int value)
+        private string FizzBuzzTest(int value)
         {
 
             StringBuilder stream = new StringBuilder();
             if (value % 3 == 0) stream.Append(fizz);
             if (value % 5 == 0) stream.Append(buzz);
             if (stream.Length > 0) return stream.ToString();
-            return value;
+            return value.ToString();
         }
     }
         
